@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220, 16%, 96%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 220, 13%, 91%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 8px;
+
+    --button-secondary: 210deg 18.18% 91.37%;
+  }
+}
+
+@layer base {
+  * {
+    /*font-family: 'Jost', sans-serif, 'Times New Roman';*/
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html,
+  body,
+  #root {
+    font-family: Jost, Roboto, Helvetica, sans-serif, 'Times New Roman';
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.scrollable {
+  @apply max-w-[332px];
+}
+
+@media screen and (max-width: 768px) {
+  .scrollable {
+    @apply h-[80vh] !important;
+    @apply max-h-[80vh];
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .scrollable {
+    @apply h-[719px] !important;
+    @apply max-h-[719px];
+  }
+}
+
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-y.ps--clicking {
+  background-color: transparent !important;
+}
+
+.ps__rail-y:hover > .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y.ps--clicking .ps__thumb-y {
+  width: 6px !important;
+}

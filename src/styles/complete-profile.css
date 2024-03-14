@@ -1,0 +1,37 @@
+/*.card {*/
+/*  @apply*/
+/*  flex*/
+/*  flex-col*/
+/*  rounded-md*/
+/*  bg-white*/
+/*  min-w-[240px]*/
+/*  min-h-[32px]*/
+/*  md:min-h-[152px]*/
+/*  border*/
+/*  border-gray-200;*/
+/*}*/
+
+/*.cardHeader {*/
+/*  @apply min-h-[60px] p-4 text-base text-gray-700 border-b font-medium flex items-center gap-2;*/
+/*}*/
+
+/*.cardContent {*/
+/*  @apply p-4 text-gray-500 text-sm;*/
+/*}*/
+
+.label {
+  @apply w-fit lg:min-w-[280px] lg:max-w-[280px] font-medium;
+}
+
+.row {
+  @apply max-w-[824px] flex flex-col lg:flex-row gap-2;
+}
+
+.row-one {
+  @apply flex flex-col lg:flex-row gap-5 max-w-[824px];
+}
+
+.input-container {
+  margin-top: 0 !important;
+  @apply flex flex-col w-full space-y-1;
+}
